@@ -41,6 +41,33 @@ let favoriteFood = "akara";
 
 console.log(favoriteFood.replace('a', 'A'))
 
+
+/*
+ * Programming Quiz: String Equality for All
+ *
+ * QUIZ REQUIREMENTS
+ * 1. Your code should have a variable `answer`
+ * 2. Your code should have "ALL Strings are CrEaTeD equal" on the left side
+ * 3. Your code should use `==` comparison operator
+ * 4. The comparison should evaluate to true
+ * 5. The right side of your expression should match the left side
+ */
+
+let leftString = "All STRINGS are CrEaTED Equal"
+
+let Equal = leftString.slice(24, 30).toLowerCase();
+let All = leftString.slice(0,3).toUpperCase();
+let trings = leftString.slice(5,11).toLowerCase();
+let charE  = leftString[21].toLowerCase();
+
+
+const answer  =  "ALL Strings are CrEaTeD equal" ==`${All} S${trings} are CrEaT${charE}D ${Equal}`
+
+console.log(answer)
+
+
+
+
 /*
  * Programming Quiz: All Tied Up
  
@@ -235,15 +262,40 @@ if (musicians < 0){
  */
 
 
-var room = "dining room";
-var suspect = "Mr. Parkes";
-var weapon = "knife";
-var solved = true;
+let room  = "gallery" ; 
+let suspect = "Ms. Van Cleve";
+let weapon  = "";
+let solved = false;
 
-if (solved == true){
-    console.log(`${suspect} did it in the ${room} with the ${weapon}!`)
+if( room === "ballroom" && suspect === "Mr. Kalehoff"){
+	let weapon = "poison";
+  let solved  = true
+ if (solved){
+console.log(`${suspect} did it in the ${room} with the ${weapon}!`)
 }else{
-    console.log(" ")
+console.log("----")
+}
+  
+}else if(room === "gallery" && suspect === "Ms. Van Cleve"){
+	let weapon = "trophy";
+   let solved  = true
+    if (solved){
+console.log(`${suspect} did it in the ${room} with the ${weapon}!`)
+}
+}else if (room === "billiards room" && suspect === "Mrs. Sparr"){
+ let weapon = "pool stick";
+  let solved  = true
+   if (solved){
+console.log(`${suspect} did it in the ${room} with the ${weapon}!`)
+}
+}else if (room === "dining room" && suspect === "Mr. Parkes "){
+	let weapon = "knife";
+   let solved  = true
+    if (solved){
+console.log(`${suspect} did it in the ${room} with the ${weapon}!`)
+}
+}else{
+		console.log("----")
 }
 
 
@@ -351,21 +403,25 @@ if(flavor === "chocolate" || flavor === "vanilla",
  */
 
 
-var shirtWidth = 23;
-var shirtLength = 30;
-var shirtSleeve = 8.71;
+var shirtWidth = 21;
+var shirtLength = 29;
+var shirtSleeve = 8.39;
 
-if(shirtWidth <= 18 && shirtLength <= 28 && shirtSleeve <= 8.13){
+if(shirtWidth == 18 && shirtLength < 29 && shirtSleeve < 8.38){
     console.log("S")
-}else if(shirtWidth <= 20 && shirtLength <= 29 && shirtSleeve <= 8.38){
+}else if((shirtWidth => 20 && shirtWidth <= 22) && (shirtLength => 29 && shirtLength <= 30) 
+        && (shirtSleeve => 8.38 && shirtSleeve <= 8.63)){
     console.log("M")
-}else if(shirtWidth <= 22 && shirtLength <= 30 && shirtSleeve <= 8.63){
+}else if((shirtWidth => 22 && shirtWidth <= 24) && (shirtLength => 30 && shirtLength <= 31) 
+        && (shirtSleeve => 8.63 && shirtSleeve <= 8.88)){
     console.log("L")
-}else if(shirtWidth <= 24 && shirtLength <= 31 && shirtSleeve <= 8.88){
+}else if((shirtWidth => 24 && shirtWidth <= 26) && (shirtLength => 30 && shirtLength <= 33) 
+        && (shirtSleeve => 8.88 && shirtSleeve <= 9.63)){
     console.log("XL")
-}else if(shirtWidth <= 26 && shirtLength <= 33 && shirtSleeve <= 9.63){
+}else if((shirtWidth => 26 && shirtWidth <= 28) && (shirtLength => 33 && shirtLength <= 34) 
+        && (shirtSleeve => 9.63 && shirtSleeve <= 10.13)){
     console.log("2XL")
-}else if(shirtWidth <= 28 && shirtLength <= 34 && shirtSleeve <= 10.13){
+}else if(shirtWidth >= 28 && shirtLength >= 34 && shirtSleeve >= 10.13){
     console.log("3XL")
 }else{
     console.log("NA")
@@ -396,11 +452,15 @@ if(shirtWidth <= 18 && shirtLength <= 28 && shirtSleeve <= 8.13){
  */
 
 
-let eatsPlants = true;
+let eatsPlants = false;
 let eatsAnimals = false;
 
-let consumer = eatsPlants === true ? "herbivore" : (eatsAnimals === true ? "carnivore" : "omnivore");
-console.log(consumer)
+
+let category = eatsPlants === true && eatsAnimals === false ? "herbivore" :
+                eatsPlants === false && eatsAnimals === true ? "Carnivore" : 
+        eatsPlants === true && eatsAnimals === true ? "Omnivore" : "undefined" 
+
+console.log(category)
 
 
 /*
